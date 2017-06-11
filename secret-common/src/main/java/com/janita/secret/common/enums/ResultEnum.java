@@ -6,9 +6,11 @@ package com.janita.secret.common.enums;
  */
 public enum ResultEnum {
 
-    INTERNAL_WRONG(2, "内部错误"),
+    UNKNOWN_ERROR(-1, "未知错误"),
 
-    UNKNOWN_ERROR(3, "未知错误");
+    INTERNAL_WRONG(1, "内部错误"),
+
+    PHONE_REGISTERED(2, "该手机号码已经注册,可直接登录");
 
     private int code;
 

@@ -1,4 +1,4 @@
-package com.janita.secret.common.entity;
+package com.janita.secret.common.domain.base;
 
 import lombok.Data;
 
@@ -12,29 +12,28 @@ import java.math.BigDecimal;
  */
 @Data
 @Entity
-@Table(name = "user",uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"mobilePhone"}),
-        @UniqueConstraint(columnNames = {"email"})
-})
+@Table(name = "user")
 public class User implements Serializable{
 
     @Id
     private String userId;
 
     //手机,用于登录
+    @Column(nullable = false, unique = true, length = 20, columnDefinition = "手机号码")
     private String mobilePhone;
 
     //MD5
+    @Column(nullable = false)
     private String password;
 
     //昵称
     private String nickname;
 
-    //邮箱,可用于登录
+    //邮箱
     private String email;
 
     //性别,0:女,1:男,默认为 1
-    @Column(name = "gender", columnDefinition = "tinyint default 1")
+    @Column(columnDefinition = "tinyint default 1")
     private int gender = 1;
 
     //头像

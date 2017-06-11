@@ -1,4 +1,4 @@
-package com.janita.secret.common.entity;
+package com.janita.secret.common.domain;
 
 import lombok.Data;
 

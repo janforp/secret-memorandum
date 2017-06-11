@@ -16,4 +16,17 @@ public class CommonUtils {
         UUID uuid =  UUID.randomUUID();
         return uuid.toString();
     }
+
+    public static boolean isEmpty(Object object) {
+        if (object == null) {
+            return true;
+        }
+        if (object instanceof String) {
+            String string = (String) object;
+            if ("".equals(string.trim())) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

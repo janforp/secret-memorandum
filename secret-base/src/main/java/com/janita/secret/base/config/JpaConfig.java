@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * 该类是:
  */
 @EnableJpaRepositories(basePackages = "com.janita.secret.base.repository")
-@EntityScan(basePackages = "com.janita.secret.common.entity")
+@EntityScan(basePackages = "com.janita.secret.common.domain")
 @Configuration
 public class JpaConfig {
 }

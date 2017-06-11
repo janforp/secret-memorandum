@@ -24,6 +24,21 @@ public class ResultDtoFactory {
         return resultDto;
     }
 
+    public static ResultDto toSuccess(String message) {
+        ResultDto resultDto = new ResultDto<>();
+        resultDto.setCode(0);
+        resultDto.setMessage(message);
+        return resultDto;
+    }
+
+    public static  ResultDto toSuccess() {
+        ResultDto resultDto = new ResultDto<>();
+        resultDto.setCode(0);
+        resultDto.setMessage("success");
+        return resultDto;
+    }
+
+
     /**
      * 统一返回业务异常dto
      * @param resultEnum    dto中的数据
